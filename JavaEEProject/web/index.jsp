@@ -9,8 +9,31 @@
 <html>
   <head>
     <title>JavaEEProject</title>
+
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      ul {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-  Hello World!
+  <div>
+    <h1>Verteilte Anwendungen</h1>
+    <ul>
+      <li>
+        <a href="helloWorld">Hello World</a>
+      </li>
+      <li>
+        <a href="bmiRechner">BMI-Rechner</a>
+      </li>
+    </ul>
+  </div>
   </body>
 </html>
