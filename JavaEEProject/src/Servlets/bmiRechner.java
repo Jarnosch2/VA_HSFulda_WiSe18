@@ -1,5 +1,7 @@
 package Servlets;
 
+import Helpers.DB_Manager;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -14,6 +16,9 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "bmiRechner", urlPatterns = "/bmiRechner")
 public class bmiRechner extends HttpServlet {
+
+    private DB_Manager db_manager = new DB_Manager();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userName = request.getParameter("name");
         float userWeight = Float.parseFloat(request.getParameter("weight"));
@@ -21,6 +26,8 @@ public class bmiRechner extends HttpServlet {
         String userDate = request.getParameter("date");
 
         float bmi = userWeight / (userHeight * userHeight);
+
+        db_manager.addEntry(userName, userWeight, userHeight, bmi, userDate);
 
         String logEntry =   "Name: " + userName + ";\n" +
                             "Weight: " + userWeight + "kg;\n" +

@@ -23,12 +23,6 @@
             margin: 10px;
 
         }
-
-        #buttonContainer{
-            width: 180px;
-            margin-left: auto;
-            margin-right: auto;
-        }
     </style>
 </head>
 <body>
@@ -69,7 +63,7 @@
                 </td>
             </tr>
         </table>
-        <table style="margin-top: 20px">
+        <table style="margin-top: 20px; margin-bottom: 30px">
             <tr>
                 <td>
                     <input type="submit" value="Calculate BMI">
@@ -81,8 +75,27 @@
         </table>
     </form>
 
+    <hr>
 
-    <h2 id="result"></h2>
+    <form action="getEntriesForName" method="POST" style="margin-top: 30px">
+        <table>
+            <tr>
+                <td>
+                    <Label for="dbQueryName">Name:</Label>
+                </td>
+                <td>
+                    <input id="dbQueryName" type="text" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="text-align: center">
+                        <input type="submit" value="Search" style="margin-top: 20px;">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
 
 </div> <!-- content -->
 

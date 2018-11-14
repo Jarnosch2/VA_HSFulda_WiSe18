@@ -9,7 +9,7 @@ const bmiCalc = require(path.join(__dirname+'/public/modules/bmiCalc'));
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Lorwyn59",
+    password: "root",
     database: "VerteilteAnwendungen"
 });
 
